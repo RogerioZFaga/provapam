@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="provadepam.MainPage">
+
+    <ScrollView>
+		<VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+			<Label
+                Text="ROLADOR DE DADOS"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontSize="50"
+                FontAttributes="Bold"
+                />
+
+			<Label
+                x:Name="DiceResult"
+                Text="6"
+                HorizontalOptions="Center"
+                FontSize="80"
+                FontAttributes="Bold"
+                />
+
+			<Picker x:Name="NumberPicker"
+                    Title="Quantidade de Lados"
+                    SelectedIndexChanged="NumberPicker_SelectedIndexChanged"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    >
+				<Picker.ItemsSource>
+					<x:Array Type="{x:Type x:Int32}">
+						<x:Int32>4</x:Int32>
+						<x:Int32>6</x:Int32>
+						<x:Int32>10</x:Int32>
+						<x:Int32>20</x:Int32>
+						<x:Int32>100</x:Int32>
+					</x:Array>
+				</Picker.ItemsSource>
+			</Picker>
+
+			<Button
+                x:Name="RolarDadoButton"
+                Text="ROLAR O DADO"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Clicked="RolarDadoButton_Clicked"
+                BackgroundColor="Grey"
+                />
+		</VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
