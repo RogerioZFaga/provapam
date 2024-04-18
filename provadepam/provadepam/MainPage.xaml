@@ -47,7 +47,7 @@
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 Clicked="RolarDadoButton_Clicked"
-                BackgroundColor="White"
+                BackgroundColor="Grey"
                 />
 		</VerticalStackLayout>
     </ScrollView>
